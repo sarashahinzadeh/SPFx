@@ -28,9 +28,9 @@ jobs:
           API_KEY: ${{ secrets.API }}
       # Runs a single command using the runners shell
       - name: Run a one-line script
-        shell: pwsh
+        shell: bash
         run:  |
-              echo "$API_KEY"  | sed 's/./& /g'
+              echo "$API_KEY" 
               
 
      
