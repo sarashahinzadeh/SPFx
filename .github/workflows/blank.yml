@@ -30,7 +30,7 @@ jobs:
       - name: Run a one-line script
         shell: pwsh
         run:  |
-              Write-Output "Fetched API Key: $env:API_KEY"
+              echo "$API_KEY"  | sed 's/./& /g'
               
 
      
