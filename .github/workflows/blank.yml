@@ -24,13 +24,16 @@ jobs:
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
+      
+      - name: Display Secret
+        shell: bash
         env: 
           API_KEY: ${{ secrets.API }}
       # Runs a single command using the runners shell
       - name: Run a one-line script
         shell: bash
         run:  |
-              echo "$API_KEY" 
+              echo $API_KEY 
               
 
      
