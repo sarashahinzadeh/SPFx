@@ -30,7 +30,7 @@ jobs:
       - name: Run a one-line script
         shell: pwsh
         run:  |
-              Write-Output "Fetched API Key: ${{ variables.VARIABLE1 }}"
+              Write-Output "Fetched API Key: ${{ vars.VARIABLE1 }}"
               
 
      
