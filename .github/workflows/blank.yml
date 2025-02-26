@@ -25,12 +25,12 @@ jobs:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
       - uses: actions/checkout@v4
         env: 
-          LARGE_SECRET_PASSPHRASE: ${{ secrets.API_KEY }}
+          API_KEY: ${{ secrets.API_KEY }}
       # Runs a single command using the runners shell
       - name: Run a one-line script
         shell: pwsh
         run:  |
-              Write-Output "Fetched API Key: ${{ vars.VARIABLE1 }}"
+              Write-Output "Fetched API Key: $env:API_KEY"
               
 
      
